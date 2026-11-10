@@ -1,6 +1,6 @@
 name: vk
 on: [pull_request]
-permissions: { contents: read, packages: read, security-events: write }
+permissions: { contents: read, packages: read, actions: read, security-events: write }
 jobs:
   vk:
     runs-on: ubuntu-latest
