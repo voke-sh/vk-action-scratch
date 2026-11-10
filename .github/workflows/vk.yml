@@ -1,0 +1,13 @@
+name: vk
+on: [pull_request]
+permissions: { contents: read, packages: read, actions: read, security-events: write }
+jobs:
+  vk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: voke-sh/cli@feature/phase-14-run-action
+        with: { registry-token: '${{ secrets.VOKE_GHCR_TOKEN || github.token }}' }
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          VK_URL: https://voke-sh-agent-readiness.vercel.app

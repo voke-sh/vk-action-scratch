@@ -1,0 +1,4 @@
+project: vk-action-scratch
+image: ghcr.io/voke-sh/runner:v0.2.0
+surfaces:
+  docs: { name: resend-docs, version: "2026-11-10" }
